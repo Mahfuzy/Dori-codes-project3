@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Telex&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+:root {
+    --orange: #FF7614;
+    --brown: #826314;
+    --lightorange: #FFA826;
+    --red: #BD2F00;
+    --lightbrown: #B3991B;
+}
+
+body {
+    background-color: rgb(255, 143, 95);
+}
+
+header {
+    width: 100%;
+    background: transparent;
+    padding: 0 5%;
+}
+
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/icons8-search-50.png);
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+ .menu-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/hamburger.png);
+    display: inline-block;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+
+ .search-bar {
+    height: 21px;
+    margin-right: 10px;
+    display: none;
+}
+
+.search-bar.display {
+    display: flex;
+    width: 100%;
+}
+
+.tools {
+    display: flex;
+    margin-left: 60px; 
+    flex-direction: row-reverse;
+}
+
+ .search-bar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+ .nav-list {
+    display: flex;
+    list-style: none;
+    padding-right: 5%;
+}
+
+header .nav-list li a {
+    color: black;
+    margin-left: 60px;
+    text-decoration: none;
+}
+
+header .nav-list li a:hover {
+    color: var(--red);
+}
+
+header .nav-list .cart {
+    display: flex;
+    margin-left: 60px;
+}
+
+header .nav-list .cart a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+header .nav-list .cart:hover a{
+    color: var(--red);
+
+    
+}
+
+header section .header-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4%;
+}
+
+header section .header-details .year {
+    align-self: flex-end;
+    font-size: 10rem;
+    color: var(--red);
+    opacity: 0.2;
+}
+
+header section .header-details .other .emerica {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+header section .header-details .other h1 {
+    font-size: 6rem;
+}
+
+header section .header-details .other {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.other-details {
+    display: flex;
+}
+
+.other-details h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.other-details {
+    display: flex;
+    flex-direction: column;
+}
+
+header section .header-details .other span {
+    font-size: 1.5rem;
+    align-self: flex-end;
+}
+
+header section .header-details .other .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--red);
+    max-width: 210px;
+}
+
+header section .header-details .other .price .btn {
+    width: 55%;
+    height: 30px;
+    border: none;
+    background-color: var(--red);
+    color: white;
+    font-size: 1.1rem;
+}
+
+header section .header-details .other .price p {
+    padding-right: 10%;
+    color: var(--red);
+    font-size: 1.1rem;
+}
+
+header .header-details .shoe-img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-15%, -40%);
+    
+}
+
+header .shoe-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+main {
+    padding: 0 5%;
+}
+
+
+#shoe-sales .slider{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+#shoe-sales .slider::-webkit-scrollbar {
+    display: none;
+}
+
+#shoe-sales .slider {
+    scrollbar-width: none;
+}
+
+#shoe-sales .shoe-card {
+    width: 256px;
+    /* box-shadow: -1px 2px 9px 3px rgba(0,0,0,0.10); */
+    margin: 0 20px;
+    overflow: hidden;
+    flex: none;
+}
+
+#shoe-sales .shoe-card .shoe-img {
+    width: 260px;
+    height: 200px;
+}
+
+#shoe-sales .shoe-card .shoe-image img {
+    width: 100%;
+    height: 100%;
+}
+
+#shoe-sales .shoe-card .shoe-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 30px;
+    justify-content: center;
+}
+
+#shoe-sales .shoe-card .shoe-details .brand {
+    margin-bottom: 5px;
+}
+
+#shoe-sales .shoe-card .shoe-details .lorem {
+    margin-bottom: 10px;
+}
+
+.next,
+.prev {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: black;
+    color: rgb(215, 197, 197);
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+
+.next:hover, .prev:hover {
+    background-color: rgb(127, 93, 49);
+    transition: .2s;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+#video {
+    width: 100%;
+    background-color: #ff6e3e;
+    margin: 50px auto;
+}
+
+
+#video video {
+    width: 100%;
+    padding: 20px;
+}
+
+.shoe-about {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.shoe-about h1{
+    font-size: 3rem;
+    margin-right: 30px;
+}
+.shoe-about .about-item1, .about-item2, .about-item3 {
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+.about-item2 {
+    flex-direction: row-reverse;
+}
+
+.shoe-details {
+    display: flex;
+}
+
+.text-container {
+    font-size: 2.5rem;
+    width: 300px;
+}
+
+
+
+
+@media (max-width:600px) {
+
+    #shoe-sales .slider{
+        margin-top: 10px;
+    }
+
+    header .header-details .shoe-img {
+        display: none;
+    }
+
+    header section .header-details .other{
+        max-width: 157px;
+    }
+
+
+    header .header-details .year p{
+        font-size: 5rem;
+    }
+
+    header section .header-details .other .price .btn {
+        font-size: 0.9rem;
+    }
+
+    header section .header-details .other .price p {
+        font-size: 1rem;
+    }
+
+    header section .header-details .other h1 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    header section .header-details .other span {
+        font-size: 0.7rem;
+    }
+
+    header section .header-details .other .emerica {
+        font-size: 1.5rem;
+    }
+
+    .next,
+    .prev {
+        display: none;
+    }
+
+    #shoe-sales .slider{
+        margin-top: 50px;
+    }
+
+    
+
+}
+
+
+
+@media (max-width:1000px) {
+    
+
+    header .nav-list {
+        display: none;
+    }
+
+    header .header-details .shoe-img {
+        top: 40%;
+    }
+
+    header .shoe-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    header .menu-icon {
+        display: block;
+    }
+
+    header .nav-list.show {
+        top: 10%;
+        right: 0;
+        position: absolute;
+        height: 80%;
+        background-color: rgba(237, 237, 237, 0.637);
+        z-index: 1000;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    header .nav-list.show li {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .tools {
+        display: flex;
+    }
+
+
+    .shoe-about .about-item2 {
+        align-self: flex-start;
+    }
+    .about-image {
+        display: none;
+    }
+
+    .text-container {
+        font-size: 1.5rem;
+        width: auto;
+    }
+    
+}
